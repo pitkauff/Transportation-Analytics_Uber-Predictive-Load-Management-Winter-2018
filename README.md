@@ -1,11 +1,16 @@
 # Uber - Predictive Load Management
 
-### Problem Statement: ride-sharing companies such as Uber and Lyft have historically had issues with large-scale events (inlduing concerts and sports events) to the extent that customers are forced to either accept high wait times or exorbitant surge priing. The below analysis attempts to suggest a solution to that problem, by predicting requests ahead of time, which would allow a company to pre-emptively relocate vehicles in anticipation of demand spikes.
+**Problem Statement:** ride-sharing companies such as Uber and Lyft have historically had issues with large-scale events (inlduing concerts and sports events) to the extent that customers are forced to either accept high wait times or exorbitant surge priing. The below analysis attempts to suggest a solution to that problem, by predicting requests ahead of time, which would allow a company to pre-emptively relocate vehicles in anticipation of demand spikes. The project was part of IEOR 4418 - Transportation Analytics and Logistics at Columbia.
 
 **Data Sources**
 
-- Uber trip data - https://github.com/fivethirtyeight/uber-tlc-foil-response
-- Yellow taxi trip data - http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml
+In order to correctly test the effectiveness of our approach, we select a set of control dates and a single effect date. Since the available [Uber data] (https://github.com/fivethirtyeight/uber-tlc-foil-response) was from 2014, we picked Tuesday May 13th, 2014 to be the effect day: that night Lady Gaga performed at a sold-out Madison Square Garden. In order to eliminate any potential distortion due to day of week, we picked the remaining Tuesdays in May 2014 to be in the control group, making sure that no extr-ordinary events took place during those days. Given the limited data available from Uber, we used [NYC Yellow Cab data] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) as a substitue to estimate several of our model parameters
+
+**Methodology:**
+
+- Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/)
+- Step 2: Define problem:
+      * 
 
 x<sub>ij</sub>
 
