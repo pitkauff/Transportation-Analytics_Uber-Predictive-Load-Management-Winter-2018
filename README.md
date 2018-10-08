@@ -17,10 +17,11 @@ In order to correctly test the effectiveness of our approach, we select a set of
 <p align="center">
 <img src="Circles.png" style="display: block; margin: auto;" height="300" width="375" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We never assume a customer in area 1 to be paired with a driver in area 3, but still included it, in order to model the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process with an infinite queue model (i.e. all customers will be served)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We never assume a customer in area 1 to be paired with a driver in area 3, but still included it in order to model the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process with an infinite queue model (i.e. all customers will be served)
 
-- Step 2: Define problem: We decided to approach the problem from 
-     * 
+- Step 2: Define problem: We decided to approach the problem from two different perspectives: a linear program and simluation. The linear program(s) were primarily used to find the optimal relocation of vehicles between the three areas, given the provided Uber trip data. We then used simulation to understand how robust our estimations were: given a Poisson process of customer arrivals, how much would profit increase as a function of demand, and what are break-even levels
+
+- Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters
 
 x<sub>ij</sub>
 
