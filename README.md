@@ -22,12 +22,14 @@ In order to correctly test the effectiveness of our approach, we select a set of
 - Step 2: Define problem: We decided to approach the problem from two different perspectives: a linear program and simluation. The linear program(s) were primarily used to find the optimal relocation of vehicles between the three areas, given the provided Uber trip data. We then used simulation to understand how robust our estimations were: given a Poisson process of customer arrivals, how much would profit increase as a function of demand, and what are break-even levels
 
 - Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters
-    - Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) during the control days: N<sub>0j</sub>
+    - N<sub>0j</sub>: Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) during the control days. 
 
       <p align="center">
       <img src="Images/N_0j.png" style="display: block; margin: auto;" height="50" width="275" /> 
     
-    - True (unbiased) demand for Ubers in area j: D<sub>j</sub>. We reasoned that there is a true (unobservable) demand for Ubers which, if adjusted for customer who opt for alterntaive transportation methods because of surge pricing or long wait times, leads to the observed demand during the effect date. For this purpose, our assumptions are D<sub>1</sub> = 100 and D<sub>2</sub> = 20.
+    -  D<sub>j</sub>: True (unbiased) demand for Ubers in area j. We reasoned that there is a true (unobservable) demand for Ubers which, if adjusted for customer who opt for alterntaive transportation methods because of surge pricing or long wait times, leads to the observed demand during the effect date. For this purpose, our assumptions are D<sub>1</sub> = 100 and D<sub>2</sub> = 20.
+    
+    - x<sub>ij</sub>: Probability that a customer in location i will choose Uber, given that driver needs to travel from location j. In order to model these probabilities, we applied a logit choice model, for we first defined utility functions for Ubers and subways, which we assumed were the only two options. Fro simplicity, we assumed that only two factors affect people's utility function: wait time (WA) and price (P), which was represented as a sensitivity to surge pricing (S) in the case of Ubers. S was estimated using average surge pricing factors during the Billy Jole concert at MSG in April 2018. Uber travel times were estimated using average Yellow Cab trip duration between the different areas for all trip where duration $\leq$ 15 minutes. 
 
 
 x<sub>ij</sub>
