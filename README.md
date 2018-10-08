@@ -41,7 +41,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
       <p align="center">
       <img src="Images/c_ij.png" style="display: block; margin: auto;" height="15" width="275" /> 
     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where M<sub>3</sub> is a factor to scale the cost of moving cars into the system from area 3.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where M<sub>3</sub> is a factor to scale the cost of moving cars into the system from area 3.
 
     - r: Expected revenue of an Uber driver per trip. This was estimated from the Yello Cab data, adjusting for base fares, tips and surge pricing. In our case, the average revenue per trip was $13.54
    
