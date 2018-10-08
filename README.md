@@ -4,7 +4,7 @@
 
 Ride-sharing companies such as Uber and Lyft have historically had issues with large-scale events (inlduing concerts and sports events) to the extent that customers are forced to either accept high wait times or exorbitant surge priing. The below analysis attempts to suggest a solution to that problem, by predicting requests ahead of time, which would allow a company to pre-emptively relocate vehicles in anticipation of demand spikes. 
 
-The project was part of IEOR 4418 - Transportation Analytics and Logistics at Columbia.
+This project was part of IEOR 4418 - Transportation Analytics and Logistics at Columbia.
 
 **Data Sources**
 
