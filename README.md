@@ -17,9 +17,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
 <p align="center">
 <img src="Circles.png" style="display: block; margin: auto;" height="300" width="375" />
 
-For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. We never assume a
-customer in area 1 to be paired with a driver in area 3, but still included it, in order to model the process with an infinite queue
-model (i.e. all customers will be served)
+&nbsp;&nbsp; For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. We never assume a customer in area 1 to be paired with a driver in area 3, but still included it, in order to model the process with an infinite queue model (i.e. all customers will be served)
 
 - Step 2: Define problem: We decided to approach the problem from 
      * 
