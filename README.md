@@ -10,7 +10,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
 
 **Methodology:**
 
-- Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/)
+- Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/), a tool that has a corresponding [Python API](https://pypi.org/project/pygeohash/) to easily turn the hashes into lat / lon pairs.
 - Step 2: Define problem:
       * 
 
