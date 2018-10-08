@@ -32,7 +32,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
     - x<sub>ij</sub>: Probability that a customer in location i will choose Uber, given that driver needs to travel from location j. In order to model these probabilities, we applied a multi-nomial logit choice model, for we first defined utility functions for Ubers and subways, which we assumed were the only two options. Fro simplicity, we assumed that only two factors affect people's utility function: wait time (WA) and price (P), which was represented as a sensitivity to surge pricing (S) in the case of Ubers. S was estimated using average surge pricing factors during the Billy Jole concert at MSG in April 2018. Uber travel times were estimated using average Yellow Cab trip duration between the different areas for all trip where duration $<=$ 15 minutes. 
     
       <p align="center">
-      <img src="Images/x_ij.png" style="display: block; margin: auto;" height="50" width="275" /> 
+      <img src="Images/x_ij.png" style="display: block; margin: auto;" height="100" width="225" /> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We finally applied the resulting utilities to a standard softmax function to obtain probabilities
 
