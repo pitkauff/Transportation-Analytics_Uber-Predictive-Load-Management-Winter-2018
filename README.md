@@ -24,8 +24,9 @@ In order to correctly test the effectiveness of our approach, we select a set of
 - Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters
     - Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) during the control days: N<sub>0j</sub>
 
-<p align="center">
-<img src="Images/N_0j.png" style="display: block; margin: auto;" height="200" width="400" /> 
+      <p align="center">
+      <img src="Images/N_0j.png" style="display: block; margin: auto;" height="100" width="300" /> 
+    
     - True (unbiased) demand for Ubers in area j: D<sub>j</sub>. We reasoned that there is a true (unobservable) demand for Ubers which, if adjusted for customer who opt for alterntaive transportation methods because of surge pricing or long wait times, leads to the observed demand during the effect date. For this purpose, our assumptions are D<sub>1</sub> = 100 and D<sub>2</sub> = 20.
 
 
