@@ -22,6 +22,14 @@ In order to correctly test the effectiveness of our approach, we select a set of
 - Step 2: Define problem: We decided to approach the problem from two different perspectives: a linear program and simluation. The linear program(s) were primarily used to find the optimal relocation of vehicles between the three areas, given the provided Uber trip data. We then used simulation to understand how robust our estimations were: given a Poisson process of customer arrivals, how much would profit increase as a function of demand, and what are break-even levels
 
 - Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters
+    - Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) : N<sub>0j</sub>
+<p align="center">
+
+|   |   N_0j   | 
+| - | -------- |
+| 1 | 5.3333   | 
+| 2 | 43.6667  |  
+| 3 | 704.6667 | 
 
 x<sub>ij</sub>
 
@@ -39,12 +47,6 @@ c<sub>ij</sub>
 | 2 | 4.14604 | 0       | 5.24474 |
 | 3 | 8.19311 | 5.24474 | 0       | 
 
-N<sub>0j</sub>
 
-|   |   N_0j   | 
-| - | -------- |
-| 1 | 5.3333   | 
-| 2 | 43.6667  |  
-| 3 | 704.6667 | 
 
 r = 13.54
