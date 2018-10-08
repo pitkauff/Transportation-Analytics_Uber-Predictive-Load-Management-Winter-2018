@@ -49,6 +49,6 @@ In order to correctly test the effectiveness of our approach, we select a set of
 
 **Modeling**
 
-For more information on modeling, please visit our [final paper](https://github.com/pitkauff/Transportation-Analytics_Uber-Predictive-Load-Management-Winter-2018/blob/master/uber-load-rebalancing.pdf).
+For more information on modeling, please visit our [final paper](https://github.com/pitkauff/Uber-Predictive-Load-Management-2018/blob/master/uber-load-rebalancing.pdf).
    
 
