@@ -25,7 +25,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
     - N<sub>0j</sub>: Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) during the control days. 
 
       <p align="center">
-      <img src="Images/N_0j.png" style="display: block; margin: auto;" height="65" width="275" /> 
+      <img src="Images/N_0j.png" style="display: block; margin: auto;" height="50" width="275" /> 
     
     -  D<sub>j</sub>: True (unbiased) demand for Ubers in area j. We reasoned that there is a true (unobservable) demand for Ubers which, if adjusted for customer who opt for alterntaive transportation methods because of surge pricing or long wait times, leads to the observed demand during the effect date. For this purpose, our assumptions are D<sub>1</sub> = 100 and D<sub>2</sub> = 20.
     
@@ -39,7 +39,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
     - c<sub>ij</sub>: Cost of moving a vehicle from area i to area j. The cost was calculated as follows:
     
       <p align="center">
-      <img src="Images/c_ij.png" style="display: block; margin: auto;" height="50" width="225" /> 
+      <img src="Images/c_ij.png" style="display: block; margin: auto;" height="15" width="275" /> 
 
 
 c<sub>ij</sub>
