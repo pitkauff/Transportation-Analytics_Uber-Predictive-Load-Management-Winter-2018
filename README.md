@@ -8,7 +8,7 @@ The project was part of IEOR 4418 - Transportation Analytics and Logistics at Co
 
 **Data Sources**
 
-In order to correctly test the effectiveness of our approach, we select a set of control dates and a single effect date. Since the available [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) was from 2014, we picked Tuesday May 13th, 2014 to be the effect day: that night Lady Gaga performed at a sold-out Madison Square Garden. In order to eliminate any potential distortion due to day of week, we picked the remaining Tuesdays in May 2014 to be in the control group, making sure that no extr-ordinary events took place during those days. Given the limited data available from Uber, we used [NYC Yellow Cab data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) as a substitue to estimate several of our model parameters
+In order to correctly test the effectiveness of our approach, we select a set of control dates and a single effect date. Since the available [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) was from 2014, we picked Tuesday May 13th, 2014 to be the effect day: that night Lady Gaga performed at a sold-out Madison Square Garden. In order to eliminate any potential distortion due to day of week, we picked the remaining Tuesdays in May 2014 to be in the control group, making sure that no extr-ordinary events took place during those days. Given the limited data available from Uber, we used [NYC Yellow Cab data](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) as a substitue to estimate several of our model parameters.
 
 **Methodology**
 
@@ -17,11 +17,11 @@ In order to correctly test the effectiveness of our approach, we select a set of
 <p align="center">
 <img src="Images/Circles.png" style="display: block; margin: auto;" height="300" width="375" />
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We never assume a customer in area 1 to be paired with a driver in area 3, but still included it in order to model the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process with an infinite queue model (i.e. all customers will be served)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We never assume a customer in area 1 to be paired with a driver in area 3, but still included it in order to model the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process with an infinite queue model (i.e. all customers will be served).
 
-- Step 2: Define problem: We decided to approach the problem from two different perspectives: a linear program and simluation. The linear program(s) were primarily used to find the optimal relocation of vehicles between the three areas, given the provided Uber trip data. We then used simulation to understand how robust our estimations were: given a Poisson process of customer arrivals, how much would profit increase as a function of demand, and what are break-even levels
+- Step 2: Define problem: We decided to approach the problem from two different perspectives: a linear program and simluation. The linear program(s) were primarily used to find the optimal relocation of vehicles between the three areas, given the provided Uber trip data. We then used simulation to understand how robust our estimations were: given a Poisson process of customer arrivals, how much would profit increase as a function of demand, and what are break-even levels.
 
-- Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters
+- Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters.
     - N<sub>0j</sub>: Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) during the control days. 
 
       <p align="center">
@@ -34,7 +34,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
       <p align="center">
       <img src="Images/x_ij.png" style="display: block; margin: auto;" height="75" width="225" /> 
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We finally applied the resulting utilities to a standard softmax function to obtain probabilities
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We finally applied the resulting utilities to a standard softmax function to obtain probabilities.
 
     - c<sub>ij</sub>: Cost of moving a vehicle from area i to area j. The cost was calculated as follows:
     
@@ -43,14 +43,8 @@ In order to correctly test the effectiveness of our approach, we select a set of
     
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where M<sub>3</sub> is a factor to scale the cost of moving cars into the system from area 3.
 
-c<sub>ij</sub>
+   - r: Expected revenue of an Uber driver per trip. This was estimated from the Yello Cab data, adjusting for base fares, tips and surge pricing. In our case, the average revenue per trip was $13.54
+   
+   - m<sub>ij</sub>: The # of cars to be relocated from area i to location j. This was our decision variable for the purposes of our linear programs.
+   
 
-|   |    1    |    2    |    3    |
-| - | ------- | ------- | ------- |
-| 1 | 0       | 4.14604 | 8.19311 |
-| 2 | 4.14604 | 0       | 5.24474 |
-| 3 | 8.19311 | 5.24474 | 0       | 
-
-
-
-r = 13.54
