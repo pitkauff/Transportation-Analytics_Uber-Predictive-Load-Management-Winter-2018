@@ -29,8 +29,12 @@ In order to correctly test the effectiveness of our approach, we select a set of
     
     -  D<sub>j</sub>: True (unbiased) demand for Ubers in area j. We reasoned that there is a true (unobservable) demand for Ubers which, if adjusted for customer who opt for alterntaive transportation methods because of surge pricing or long wait times, leads to the observed demand during the effect date. For this purpose, our assumptions are D<sub>1</sub> = 100 and D<sub>2</sub> = 20.
     
-    - x<sub>ij</sub>: Probability that a customer in location i will choose Uber, given that driver needs to travel from location j. In order to model these probabilities, we applied a logit choice model, for we first defined utility functions for Ubers and subways, which we assumed were the only two options. Fro simplicity, we assumed that only two factors affect people's utility function: wait time (WA) and price (P), which was represented as a sensitivity to surge pricing (S) in the case of Ubers. S was estimated using average surge pricing factors during the Billy Jole concert at MSG in April 2018. Uber travel times were estimated using average Yellow Cab trip duration between the different areas for all trip where duration $\leq$ 15 minutes. 
+    - x<sub>ij</sub>: Probability that a customer in location i will choose Uber, given that driver needs to travel from location j. In order to model these probabilities, we applied a multi-nomial logit choice model, for we first defined utility functions for Ubers and subways, which we assumed were the only two options. Fro simplicity, we assumed that only two factors affect people's utility function: wait time (WA) and price (P), which was represented as a sensitivity to surge pricing (S) in the case of Ubers. S was estimated using average surge pricing factors during the Billy Jole concert at MSG in April 2018. Uber travel times were estimated using average Yellow Cab trip duration between the different areas for all trip where duration $<=$ 15 minutes. 
+    
+      <p align="center">
+      <img src="Images/x_ij.png" style="display: block; margin: auto;" height="50" width="275" /> 
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We finally applied the resulting utilities to a standard softmax function to obtain probabilities
 
 x<sub>ij</sub>
 
