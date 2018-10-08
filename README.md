@@ -22,12 +22,11 @@ In order to correctly test the effectiveness of our approach, we select a set of
 - Step 2: Define problem: We decided to approach the problem from two different perspectives: a linear program and simluation. The linear program(s) were primarily used to find the optimal relocation of vehicles between the three areas, given the provided Uber trip data. We then used simulation to understand how robust our estimations were: given a Poisson process of customer arrivals, how much would profit increase as a function of demand, and what are break-even levels
 
 - Step 3: Estimate parameters: due to the sparse data available from Uber, we relied on estimation techniques to obtain most of our model parameters
-    - Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) : N<sub>0j</sub>
+    - Actual (observed) supply of Ubers in area j, obtained from [Uber data](https://github.com/fivethirtyeight/uber-tlc-foil-response) during the control days: N<sub>0j</sub>
 
 <p align="center">
-<img src="Images/N_0j.png" style="display: block; margin: auto;" height="300" width="375" /> 
-    
-    - True (unbiased) demand for Ubers in area j: D<sub>j</sub> 
+<img src="Images/N_0j.png" style="display: block; margin: auto;" height="200" width="400" /> 
+    - True (unbiased) demand for Ubers in area j: D<sub>j</sub>. We reasoned that there is a true (unobservable) demand for Ubers which, if adjusted for customer who opt for alterntaive transportation methods because of surge pricing or long wait times, leads to the observed demand during the effect date. For this purpose, our assumptions are D<sub>1</sub> = 100 and D<sub>2</sub> = 20.
 
 
 x<sub>ij</sub>
