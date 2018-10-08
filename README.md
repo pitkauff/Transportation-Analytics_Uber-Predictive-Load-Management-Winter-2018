@@ -31,6 +31,8 @@ In order to correctly test the effectiveness of our approach, we select a set of
 | 2 | 43.6667  |  
 | 3 | 704.6667 | 
 
+</p>
+
 x<sub>ij</sub>
 
 |   |     1    |    2     |     3    |
