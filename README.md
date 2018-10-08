@@ -34,7 +34,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
       <p align="center">
       <img src="Images/x_ij.png" style="display: block; margin: auto;" height="75" width="225" /> 
 
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We finally applied the resulting utilities to a standard softmax function to obtain probabilities
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We finally applied the resulting utilities to a standard softmax function to obtain probabilities
 
     - c<sub>ij</sub>: Cost of moving a vehicle from area i to area j. The cost was calculated as follows:
     
