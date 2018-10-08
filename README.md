@@ -15,7 +15,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
 - Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/), a tool that has a corresponding [Python API](https://pypi.org/project/pygeohash/) to easily turn the hashes into lat / lon pairs. Using these gehashes, we created three concentric zones surrounding Madison Square Garden, with area 1 being the area immediately surrunding MSG.
 
 <p align="center">
-<img src="Circles.png" style="display: block; margin: auto;" height="300" width="375" />
+<img src="Images/Circles.png" style="display: block; margin: auto;" height="300" width="375" />
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For the purposes of our modeling, we assumed area 3 to be all locations within a 15-minute driving radius of area 2. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We never assume a customer in area 1 to be paired with a driver in area 3, but still included it in order to model the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;process with an infinite queue model (i.e. all customers will be served)
 
