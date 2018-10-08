@@ -2,7 +2,9 @@
 
 **Problem Statement:** 
 
-Ride-sharing companies such as Uber and Lyft have historically had issues with large-scale events (inlduing concerts and sports events) to the extent that customers are forced to either accept high wait times or exorbitant surge priing. The below analysis attempts to suggest a solution to that problem, by predicting requests ahead of time, which would allow a company to pre-emptively relocate vehicles in anticipation of demand spikes. The project was part of IEOR 4418 - Transportation Analytics and Logistics at Columbia.
+Ride-sharing companies such as Uber and Lyft have historically had issues with large-scale events (inlduing concerts and sports events) to the extent that customers are forced to either accept high wait times or exorbitant surge priing. The below analysis attempts to suggest a solution to that problem, by predicting requests ahead of time, which would allow a company to pre-emptively relocate vehicles in anticipation of demand spikes. 
+
+The project was part of IEOR 4418 - Transportation Analytics and Logistics at Columbia.
 
 **Data Sources**
 
@@ -10,9 +12,12 @@ In order to correctly test the effectiveness of our approach, we select a set of
 
 **Methodology:**
 
-- Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/), a tool that has a corresponding [Python API](https://pypi.org/project/pygeohash/) to easily turn the hashes into lat / lon pairs.
-- Step 2: Define problem:
-      * 
+- Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/), a tool that has a corresponding [Python API](https://pypi.org/project/pygeohash/) to easily turn the hashes into lat / lon pairs. Using these gehashes, we created three concentric zones surrounding Madison Square Garden.
+
+<img src="Circles.png" style="display: block; margin: auto;" height="500" width="550" />
+
+- Step 2: Define problem: We decided to approach the problem from 
+     * 
 
 x<sub>ij</sub>
 
