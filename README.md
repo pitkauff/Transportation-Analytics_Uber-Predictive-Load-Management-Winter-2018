@@ -14,7 +14,7 @@ In order to correctly test the effectiveness of our approach, we select a set of
 
 - Step 1: manually create geolocation hashes using [geohash](http://geohash.gofreerange.com/), a tool that has a corresponding [Python API](https://pypi.org/project/pygeohash/) to easily turn the hashes into lat / lon pairs. Using these gehashes, we created three concentric zones surrounding Madison Square Garden.
 
-<img src="Circles.png" style="display, align = center: block; margin: auto;" height="400" width="500" />
+<img src="Circles.png" style="display: block; margin: auto;" height="400" width="500" align = "center" />
 
 - Step 2: Define problem: We decided to approach the problem from 
      * 
