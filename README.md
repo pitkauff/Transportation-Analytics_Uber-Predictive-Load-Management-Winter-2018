@@ -45,6 +45,10 @@ In order to correctly test the effectiveness of our approach, we select a set of
 
     - r: Expected revenue of an Uber driver per trip. This was estimated from the Yellow Cab data, adjusting for base fares, tips and surge pricing. In our case, the average revenue per trip was $13.54
    
-    - m<sub>ij</sub>: The # of cars to be relocated from area i to location j. This was our decision variable for the purposes of our linear programs.
+    - m<sub>ij</sub>: The # of cars to be relocated from area i to area j. This was our decision variable for the purposes of our linear programs.
+
+**Modeling**
+
+For more information on modeling, please visit our [final paper](https://github.com/pitkauff/Transportation-Analytics_Uber-Predictive-Load-Management-Winter-2018/blob/master/uber-load-rebalancing.pdf)
    
 
